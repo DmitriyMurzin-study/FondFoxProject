@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="40aa1676baf2438b8fc5c67d011c6775" Name="Diagram1">
+        <EntityTypeShape EntityType="FondFoxDBModel.Department" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FondFoxDBModel.LoginHistory" Width="1.5" PointX="8.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FondFoxDBModel.News" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FondFoxDBModel.Orders" Width="1.5" PointX="11.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FondFoxDBModel.Portfel" Width="1.5" PointX="8.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="FondFoxDBModel.Role" Width="1.5" PointX="3.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FondFoxDBModel.Stocks" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FondFoxDBModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FondFoxDBModel.TypeOrder" Width="1.5" PointX="9" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FondFoxDBModel.TypeStock" Width="1.5" PointX="3.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FondFoxDBModel.Users" Width="1.5" PointX="6" PointY="6.125" IsExpanded="true" />
+        <AssociationConnector Association="FondFoxDBModel.FK_News_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="FondFoxDBModel.FK_Users_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="FondFoxDBModel.FK_LoginHistory_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="FondFoxDBModel.FK_Orders_Stocks" ManuallyRouted="false" />
+        <AssociationConnector Association="FondFoxDBModel.FK_Orders_TypeOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="FondFoxDBModel.FK_Orders_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="FondFoxDBModel.FK_Portfel_Stocks" ManuallyRouted="false" />
+        <AssociationConnector Association="FondFoxDBModel.FK_Portfel_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="FondFoxDBModel.FK_Users_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="FondFoxDBModel.FK_Stocks_TypeStock" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

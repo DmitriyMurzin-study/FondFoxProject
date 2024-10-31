@@ -1,0 +1,65 @@
+﻿<Window x:Class="FondFoxProject.DepartmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FondFoxProject"
+        mc:Ignorable="d"
+        Title="FlowerFox" Height="900" Width="1600" MaxHeight="900" MaxWidth="1600" MinHeight="900" MinWidth="1600" WindowStartupLocation="CenterScreen" WindowStyle="None" Cursor="" Icon="/logo2.jpeg" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="Black" Offset="2.5"/>
+                <GradientStop Color="Transparent" Offset="0.3"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <Label Content="Отдел" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="60" Height="88" FontWeight="Bold" Foreground="#FF25CC15"/>
+        <Label Content="FondFox" HorizontalAlignment="Left" Margin="58,10,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="36" Height="54" FontWeight="Bold" Foreground="#FF848484" Background="{x:Null}"/>
+        <Image HorizontalAlignment="Left" Height="54" Margin="10,10,0,0" VerticalAlignment="Top" Width="56" Source="/logo2.png" Stretch="Fill"/>
+        <Button x:Name="closeBTN" Content="X" HorizontalAlignment="Left" Margin="1532,9,0,0" VerticalAlignment="Top" Height="55" Width="58" FontFamily="Century Gothic" FontSize="35" FontWeight="Bold" Background="{x:Null}" Foreground="Black" Cursor="Hand" BorderBrush="DarkOrange" Click="closeBTN_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="30"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Label x:Name="nameotdelLBL" Content="Название" Margin="0,73,0,0" FontFamily="Century Gothic" FontSize="48" Background="{x:Null}" Height="76" VerticalAlignment="Top" HorizontalAlignment="Center" Width="948" Foreground="Black" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+        <Grid Margin="0,712,0,0" Background="#FFFF6900">
+            <Button x:Name="addUserBTN" Content="Добавить сотрудника" HorizontalAlignment="Left" Margin="42,0,0,0" VerticalAlignment="Center" Height="84" Width="456" FontFamily="Century Gothic" FontSize="35" FontWeight="Bold" Background="White" Foreground="#FFFF6900" Cursor="Hand" BorderBrush="{x:Null}" IsEnabled="False" Click="addUserBTN_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="30"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="backBTN" Content="Назад" HorizontalAlignment="Left" Margin="1201,0,0,0" VerticalAlignment="Center" Height="84" Width="364" FontFamily="Century Gothic" FontSize="35" FontWeight="Bold" Background="White" Foreground="#FFFF6900" Cursor="Hand" BorderBrush="{x:Null}" Click="backBTN_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="30"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="deleteUserBTN" Content="Убрать сотрудника" HorizontalAlignment="Left" Margin="503,0,0,0" VerticalAlignment="Center" Height="84" Width="456" FontFamily="Century Gothic" FontSize="35" FontWeight="Bold" Background="White" Foreground="#FFFF6900" Cursor="Hand" BorderBrush="{x:Null}" IsEnabled="False" Click="deleteUserBTN_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="30"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+        <Border Margin="10,149,912,193" Padding="5" BorderThickness="1" BorderBrush="#FFD2D2D2" Background="White" CornerRadius="30">
+            <TextBlock x:Name="descriptionLBL" HorizontalAlignment="Center" Padding="10" TextWrapping="Wrap" FontFamily="Century Gothic" FontSize="24" Width="658" TextAlignment="Justify" Background="White" Height="538" VerticalAlignment="Top" Margin="0,4,0,0"><Run Text="Оп"/><Run Language="ru-ru" Text="и"/><Run Text="сание"/></TextBlock>
+        </Border>
+        <Label Content="Список сотрудников" Margin="930,142,0,0" FontFamily="Century Gothic" FontSize="36" Background="{x:Null}" Height="53" VerticalAlignment="Top" HorizontalAlignment="Left" Width="417" Foreground="Black" HorizontalContentAlignment="Center"/>
+        <DataGrid x:Name="userDataGrid" HorizontalAlignment="Left" Padding="10" Height="506" Margin="738,196,0,0" VerticalAlignment="Top" Width="804" BorderBrush="#FFFF6900" Background="White" FontFamily="Century Gothic" FontStyle="Italic" FontSize="30" SelectionChanged="userDataGrid_SelectionChanged">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+    </Grid>
+</Window>
